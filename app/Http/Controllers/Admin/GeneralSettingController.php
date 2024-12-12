@@ -74,6 +74,7 @@ class GeneralSettingController extends Controller
             $setting->github_url             = $request->github_url;
             $setting->pinterest_url          = $request->pinterest_url;
             $setting->copyright              = $request->copyright;
+            $setting->description            = $request->description;
             $setting->google_map             = $request->google_map;
 
             if ($request->hasFile('favicon')) {

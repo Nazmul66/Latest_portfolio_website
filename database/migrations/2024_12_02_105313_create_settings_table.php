@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('phone_optional')->nullable();
             $table->string('email');
             $table->string('email_optional')->nullable();
+            $table->text('description')->nullable();
             $table->text('address');
             $table->string('facebook_url')->nullable();
             $table->string('instagram_url')->nullable();

@@ -103,9 +103,9 @@
                                 </td>
                                 <td>
                                     @if ($row->status == 1)
-                                        <span class="text-success">Active</span>
+                                        <span class="btn btn-success">Active</span>
                                     @else
-                                        <span class="text-danger">Inactive</span>
+                                        <span class="btn btn-danger">Inactive</span>
                                     @endif
                                 </td>
                                 <td>

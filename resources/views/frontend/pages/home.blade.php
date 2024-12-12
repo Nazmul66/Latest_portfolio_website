@@ -1,3 +1,18 @@
+@php
+    $text1        = getSetting()->client_name;
+    $client_name  = str_replace(' ', ' <br> ', $text1);
+
+    $text2        = getSetting()->project_name;
+    $project_name = str_replace(' ', ' <br> ', $text2);
+
+    $text3        =  getSetting()->exp_name  ;
+    $exp_name     = str_replace(' ', ' <br> ', $text3);
+
+    $string       = getSetting()->multiple_name;
+    $multi_names  = explode(',', $string);
+@endphp
+
+
 @extends('frontend.layouts.master')
 
 @push('add-title')
@@ -23,7 +38,7 @@
                                         <h6><a href="{{ route('about') }}">About Us</a></h6>
                                     </div>
                                     <div class="text-center mt-30">
-                                        <a href="#0">
+                                        <a href="{{ getSetting()->pdf }}" target="_blank">
                                             <svg class="arrow-down" xmlns="http://www.w3.org/2000/svg"
                                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                 viewBox="0 0 34.2 32.3" xml:space="preserve"
@@ -39,8 +54,8 @@
                                 <div class="item2">
                                     <div class="sub-item1 box-shadwo d-flex align-items-center justify-content-center">
                                         <div class="text-center">
-                                            <h2 class="fw-700">8</h2>
-                                            <p class="fz-13">Years <br> of Experaince</p>
+                                            <h2 class="fw-700">{{ getSetting()->exp_year }}</h2>
+                                            <p class="fz-13">Years of </br> Experaince</p>
                                         </div>
                                     </div>
                                     <div class="sub-item2 box-shadwo"></div>
@@ -66,59 +81,76 @@
                         </div>
 
                         <div class="box2">
-                            <div class="item3 box-shadwo"></div>
+                            <div class="item3 box-shadwo" style="background-image: url({{ getSetting()->profile_photo }});"></div>
                             <div class="item4 box-shadwo d-flex align-items-center">
                                 <h6><a href="{{ route('portfolio') }}">Our Portfolio</a></h6>
                             </div>
                         </div>
                     </div>
                     <div class="bottom-boxs">
+                        
                         <div class="item5 box-shadwo d-flex align-items-center justify-content-center">
-                            <a href="#0" class="icon">
+                            <a href="{{ getSetting()->linkedin_url }}" class="icon">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
                         </div>
+                        
                         <div class="item6 box-shadwo d-flex align-items-center justify-content-center">
-                            <a href="#0" class="icon">
+                            <a href="{{ getSetting()->facebook_url }}" class="icon">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </div>
+
                         <div class="item7 box-shadwo d-flex align-items-center justify-content-center">
-                            <a href="#0" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
+                            @if ( !empty(getSetting()->github_url) )
+                                <a href="{{ getSetting()->github_url }}" class="icon">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            @else
+                                <a href="{{ getSetting()->instagram_url }}" class="icon">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            @endif
                         </div>
                     </div>
                 </div>
                 <div class="author-profile">
                     <div class="author-img">
                         <div class="img">
-                            <img src="{{ asset('frontend/assets/imgs/header/profile.jpg') }}" alt="">
+                            <img src="{{ asset(getSetting()->profile_photo) }}" alt="">
                         </div>
                     </div>
                     <div class="author-info">
                         <div class="text-center">
-                            <span class="main-color sub-title mb-10">UI / UX Designer</span>
-                            <h4 class="fw-500">Hi, I'm Andrew Tate</h4>
+                            <span class="main-color sub-title mb-10">{{ getSetting()->first_skill }}</span>
+                            <h4 class="fw-500">Hi, I'm {{ $multi_names[0] }}</h4>
                         </div>
                         <div class="social mt-20">
-                            <a href="#0" class="icon">
+                            <a href="{{ getSetting()->linkedin_url }}" class="icon">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="#0" class="icon">
-                                <i class="fab fa-behance"></i>
+
+                            <a href="{{ getSetting()->facebook_url }}" class="icon">
+                                <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="#0" class="icon">
-                                <i class="fab fa-dribbble"></i>
-                            </a>
+
+                            @if ( !empty(getSetting()->github_url) )
+                                <a href="{{ getSetting()->github_url }}" class="icon">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            @else
+                                <a href="{{ getSetting()->instagram_url }}" class="icon">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            @endif
                         </div>
                     </div>
                     <div class="butns mt-30">
-                        <a href="#0" class="inf-butn" data-scroll-nav="4">
+                        <a href="{{ route('contact') }}" class="inf-butn" data-scroll-nav="4">
                             <span>Contact Us</span>
                         </a>
-                        <a href="#0" class="inf-butn">
-                            <span>Dwonload CV</span>
+                        <a href="{{ asset(getSetting()->pdf) }}" class="inf-butn" target="_blank">
+                            <span>Download CV</span>
                         </a>
                     </div>
                 </div>
@@ -128,26 +160,28 @@
                     <h5 class="cd-headline slide">
                         <span>Hello, I’m</span>
                         <span class="cd-words-wrapper main-color">
-                            <b class="is-visible">Andrew Tate</b>
-                            <b>Front-End Developer</b>
-                            <b>UI/UX Designer</b>
+                            @foreach ($multi_names as $item)
+                                <b class="{{ $loop->first ? 'is-visible' : '' }}">{{ $item }}</b>
+                            @endforeach
                         </span>
                     </h5>
-                    <h1>I’m a Web Developer and <span class="bord">Digital Marketer</span> Based in Dhaka, Bangladesh.
+
+                    <h1>I’m a {{ getSetting()->first_skill }} and <span class="bord">{{ getSetting()->second_skill }}</span> Based in {{ getSetting()->location }}.
                     </h1>
-                    <p class="text">I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use.</p>
+                    <p class="text">{{ getSetting()->description }}</p>
                     <div class="stauts mt-50 pt-50 bord-thin-top">
                         <div class="d-flex align-items-center">
                             <div class="mr-40">
                                 <div class="d-flex align-items-center">
-                                    <h2>50</h2>
-                                    <p>Completed <br> Projects</p>
+                                    <h2>{{ getSetting()->project_count ?? 50 }}</h2>
+                                    <p>{!! $project_name !!}</p>
                                 </div>
                             </div>
+
                             <div class="mr-40">
                                 <div class="d-flex align-items-center">
-                                    <h2>6k</h2>
-                                    <p>Clients <br> Worldwide</p>
+                                    <h2>{{ getSetting()->client_count ?? 50 }}</h2>
+                                    <p>{!! $client_name !!}</p>
                                 </div>
                             </div>
                             <div class="ml-auto">

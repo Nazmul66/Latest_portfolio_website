@@ -20,7 +20,8 @@ use App\Http\Controllers\Admin\AboutUsController;
 // Route::group(['as' => 'admin.', 'prefix' => 'admin', 'middleware' => ['auth','IsAdmin']], function () {
 
 
-Route::group(['as' => 'admin.', 'prefix' => 'admin', 'middleware' => ['auth','IsAdmin']], function () {
+// Route::group(['as' => 'admin.', 'prefix' => 'admin', 'middleware' => ['auth','IsAdmin']], function () {
+Route::group(['as' => 'admin.', 'prefix' => 'admin'], function () {
 
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 

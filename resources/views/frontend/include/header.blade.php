@@ -5,7 +5,7 @@
                 <div class="bord">
                     <!-- Logo -->
                     <a class="logo icon-img-70" href="{{ route('home') }}">
-                        <img src="{{ asset('frontend/assets/imgs/logo-light.png') }}" alt="logo">
+                        <img src="{{ asset(getSetting()->logo) }}" alt="logo">
                     </a>
                 </div>
             </div>
@@ -45,15 +45,29 @@
             <div class="col-lg-3 col-6 order2">
                 <div class="bord d-flex justify-content-end">
                     <ul class="social d-flex rest">
-                        <li>
-                            <a href="#0"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                        <li>
-                            <a href="#0"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li>
-                            <a href="#0"><i class="fab fa-github"></i></a>
-                        </li>
+                        @if ( !empty(getSetting()->github_url) )
+                            <li>
+                                <a href="{{ getSetting()->github_url }}"><i class="fab fa-github"></i></a>
+                            </li>
+                        @endif 
+
+                        @if ( !empty(getSetting()->facebook_url) )
+                            <li>
+                                <a href="{{ getSetting()->facebook_url }}"><i class="fab fa-facebook-f"></i></a>
+                            </li> 
+                        @endif
+
+                        @if ( !empty(getSetting()->linkedin_url) )
+                            <li>
+                                <a href="{{ getSetting()->linkedin_url }}"><i class="fab fa-linkedin-in"></i></a>
+                            </li>
+                        @endif
+
+                        @if ( !empty(getSetting()->pinterest_url) )
+                            <li>
+                                <a href="{{ getSetting()->pinterest_url }}"><i class="fab fa-pinterest"></i></a>
+                            </li>
+                        @endif
                     </ul>
                     <button class="navbar-toggler" type="button">
                         <span class="icon-bar"><i class="fas fa-bars"></i></span>

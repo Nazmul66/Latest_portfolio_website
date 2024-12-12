@@ -111,12 +111,23 @@
                                             <div class="row">
                                                 <div class="col-6">
                                                     <div class="mb-3">
+                                                        <label class="form-label">Description</label>
+                                                        <textarea class="form-control" name="description" rows="3"
+                                                            style="height: 120px !important;">{{ $settings->description ?? "" }}
+                                                        </textarea>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6">
+                                                    <div class="mb-3">
                                                         <label class="form-label">Street Address</label>
                                                         <textarea class="form-control" name="address" rows="3" placeholder="Street Address...."
                                                             style="height: 120px !important;">{{ $settings->address ?? "" }}</textarea>
                                                     </div>
                                                 </div>
+                                            </div>
 
+                                            <div class="row">
                                                 <div class="col-6">
                                                     <div class="mb-3">
                                                         <label class="form-label">Google Map</label>
