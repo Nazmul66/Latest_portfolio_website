@@ -26,8 +26,6 @@
                             <th>#SL.</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Phone</th>
-                            <th>Subject</th>
                             <th>Message</th>
                             <th>Date</th>
                             <th>Status</th>
@@ -48,12 +46,6 @@
                                     <a href="mailto:{{ $row->email }}">{{ $row->name }}</a>
                                 </td>
                                 <td>
-                                    <a href="tel:{{ $row->phone }}" style="white-space: nowrap;">{{ $row->phone }}</a>
-                                </td>
-                                <td>
-                                    <span class="text-dark">{{ $row->subject }}</span>
-                                </td>
-                                <td>
                                     <span class="text-dark">{{ $row->message }}</span>
                                 </td>
                                 <td>
@@ -61,14 +53,11 @@
                                         style="white-space: nowrap;">{{ date('Y-m-d', strtotime($row->created_at)) }}</span>
                                 </td>
                                 <td>
-                                    <input type="checkbox" class="status-toggle" data-id="{{ $row->id }}"
-                                    data-toggle="toggle" data-onlabel="Active" data-offlabel="Inactive"
-                                    data-onstyle="success" data-offstyle="danger"  {{ $row->status == 1 ? 'checked' : '' }} >
-                                    {{-- @if ($row->status == 1)
-                                        <span class="text-success">Active</span>
+                                    @if ($row->status == 1)
+                                        <span class="btn btn-success">Active</span>
                                     @else
-                                        <span class="text-danger">Inactive</span>
-                                    @endif --}}
+                                        <span class="btn btn-danger">Inactive</span>
+                                    @endif
                                 </td>
                                 <td>
                                     <div class="dropdown">
@@ -112,16 +101,6 @@
                                             <div class="view_modal_content">
                                                 <label>Email : </label>
                                                 <a href="mailto:{{ $row->email }}" class="text-info">{{ $row->email }}</a>
-                                            </div>
-
-                                            <div class="view_modal_content">
-                                                <label>Phone : </label>
-                                                <a href="tel:{{ $row->phone }}" class="text-info">{{ $row->phone }}</a>
-                                            </div>
-
-                                            <div class="message_content">
-                                                <label>Subject : </label>
-                                                <span class="text-dark">{{ $row->subject }}</span>
                                             </div>
 
                                             <div class="message_content">

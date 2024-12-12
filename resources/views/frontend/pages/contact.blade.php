@@ -30,9 +30,10 @@
         <div class="row justify-content-center">
             <div class="col-lg-12">
                 <div class="google-map mb-80">
-                    <iframe id="gmap_canvas"
-                        src="https://maps.google.com/maps?q=hollwood&t=&z=11&ie=UTF8&iwloc=&output=embed">
-                    </iframe>
+                    <div id="gmap_canvas">
+                        {!! getSetting()->google_map !!}
+                    </div>
+
                 </div>
             </div>
             <div class="col-lg-5 valign">
@@ -45,7 +46,13 @@
                             <h6 class="opacity-7">Phone</h6>
                         </div>
                         <div class="ml-auto">
-                            <h4>+1 840 841 25 69</h4>
+                            <h4>
+                                @if ( !empty(getSetting()->phone) )
+                                    <a href="tel:{{ getSetting()->phone }}">{{ getSetting()->phone }}</a>
+                                @else
+                                    <a href="tel:{{ getSetting()->phone_optional }}">{{ getSetting()->phone_optional }}</a>
+                                @endif
+                            </h4>
                         </div>
                     </div>
                     <div class="item mb-30 d-flex align-items-center">
@@ -57,7 +64,11 @@
                         </div>
                         <div class="ml-auto">
                             <h4>
-                                <a href="mailto:abc@example.com">Andrew@website.com</a>
+                                @if ( !empty(getSetting()->email) )
+                                    <a href="mailto:{{ getSetting()->email }}">{{ getSetting()->email }}</a>
+                                @else
+                                    <a href="mailto:{{ getSetting()->email }}">{{ getSetting()->email_optional }}</a>
+                                @endif
                             </h4>
                         </div>
                     </div>
@@ -69,19 +80,20 @@
                             <h6 class="opacity-7">Address</h6>
                         </div>
                         <div class="ml-auto">
-                            <h4>Amsterdam, The Netherland</h4>
+                            <h4>{{ getSetting()->address }}</h4>
                         </div>
                     </div>
                 </div>
             </div>
+
+
             <div class="col-lg-7 valign">
                 <div class="full-width">
-                    <form id="contact-form" method="post" action="contact.php">
+                    <form method="POST" action="{{ route('contact.post') }}">
+                        @csrf
 
                         <div class="messages"></div>
-
                         <div class="controls row">
-
                             <div class="col-lg-6">
                                 <div class="form-group mb-30">
                                     <label>Your Name</label>
@@ -101,13 +113,13 @@
                                     <label>Your Message</label>
                                     <textarea id="form_message" name="message" required="required"></textarea>
                                 </div>
+
                                 <div class="mt-30">
                                     <button type="submit">
                                         <span class="text">Send A Message</span>
                                     </button>
                                 </div>
                             </div>
-
                         </div>
                     </form>
                 </div>

@@ -14,44 +14,51 @@
 
     <section class="services section-padding">
         <div class="container with-pad">
-            <div class="sec-head mb-80">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <div class="d-inline-block">
-                            <div class="sub-title-icon d-flex align-items-center">
-                                <span class="icon pe-7s-bell"></span>
-                                <h6>My Services</h6>
+
+            @if ( $service->is_active == 1 )
+                <div class="sec-head mb-80">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 text-center">
+                            <div class="d-inline-block">
+                                <div class="sub-title-icon d-flex align-items-center">
+                                    <span class="icon pe-7s-bell"></span>
+                                    <h6>{{ $service->title }}</h6>
+                                </div>
                             </div>
+                            <h3>{{ $service->subtitle }}</h3>
                         </div>
-                        <h3>What Services I Provide ?</h3>
                     </div>
                 </div>
-            </div>
+            @endif
+
+
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="item mb-30">
-                        <div class="cont">
-                            <div class="d-flex align-items-center mb-30">
-                                <div>
-                                    <span class="icon-img-50 mr-40">
-                                        <img src="{{ asset('frontend/assets/imgs/serv-img/1.png') }}" alt="">
-                                    </span>
+                @foreach ($services as $row)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item mb-30">
+                            <div class="cont">
+                                <div class="d-flex align-items-center mb-30">
+                                    <div>
+                                        <span class="icon-img-50 mr-40">
+                                            <img src="{{ asset($row->image) }}" alt="">
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span class="opacity-7 fz-13 mb-5">{{ $row->total_project }} Projects</span>
+                                        <h5 class="fz-20">{{ $row->title }}</h5>
+                                    </div>
                                 </div>
-                                <div>
-                                    <span class="opacity-7 fz-13 mb-5">8 Projects</span>
-                                    <h5 class="fz-20">Web Design</h5>
-                                </div>
+                                <p>{{ $row->short_desc }}</p>
+                                {{-- <a href="#0" class="mt-30">
+                                    <span>Read More</span>
+                                </a> --}}
                             </div>
-                            <p>There are many variations of passages of available but to the majority have suffered
-                                but
-                                the into majority.</p>
-                            <a href="#0" class="mt-30">
-                                <span>Read More</span>
-                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
+                @endforeach
+
+
+                {{-- <div class="col-lg-4 col-md-6">
                     <div class="item mb-30">
                         <div class="cont">
                             <div class="d-flex align-items-center mb-30">
@@ -74,6 +81,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6">
                     <div class="item mb-30">
                         <div class="cont">
@@ -97,6 +105,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6">
                     <div class="item md-mb30">
                         <div class="cont">
@@ -120,6 +129,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6">
                     <div class="item sm-mb30">
                         <div class="cont">
@@ -143,6 +153,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6">
                     <div class="item">
                         <div class="cont">
@@ -165,7 +176,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
@@ -176,7 +187,7 @@
 
     <!-- ==================== Start Pricing ==================== -->
 
-    <section class="price section-padding pt-0">
+    {{-- <section class="price section-padding pt-0">
         <div class="container with-pad">
             <div class="sec-head mb-80">
                 <div class="row justify-content-center">
@@ -242,7 +253,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- ==================== End Pricing ==================== -->
 
@@ -253,19 +264,24 @@
     <section class="brands section-padding pt-0">
         <div class="container with-pad">
             <div class="text-center">
-                <h6>More than <span class="main-color">200+ companies</span> trusted us worldwide</h6>
+                <h6><span class="main-color">Worldwide client satisfaction</span> trusted us </h6>
             </div>
+
             <div class="row">
-                <div class="col-sm-4 col-md-3 col-lg-2 col-6">
-                    <div class="item">
-                        <div class="img icon-img-100">
-                            <a href="#0">
-                                <img src="{{ asset('frontend/assets/imgs/brands/b1.png') }}" alt="">
-                            </a>
+                @foreach ($brands as $row)
+                    <div class="col-sm-4 col-md-3 col-lg-2 col-6">
+                        <div class="item">
+                            <div class="img icon-img-100">
+                                <a href="{{ asset($row->image) }}">
+                                    <img src="{{ asset($row->image) }}" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-4 col-md-3 col-lg-2 col-6">
+                @endforeach
+
+
+                {{-- <div class="col-sm-4 col-md-3 col-lg-2 col-6">
                     <div class="item">
                         <div class="img icon-img-100">
                             <a href="#0">
@@ -274,6 +290,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-sm-4 col-md-3 col-lg-2 col-6">
                     <div class="item">
                         <div class="img icon-img-100">
@@ -283,6 +300,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-sm-4 col-md-3 col-lg-2 col-6">
                     <div class="item">
                         <div class="img icon-img-100">
@@ -292,6 +310,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-sm-4 col-md-3 col-lg-2 col-6">
                     <div class="item">
                         <div class="img icon-img-100">
@@ -301,6 +320,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-sm-4 col-md-3 col-lg-2 col-6">
                     <div class="item">
                         <div class="img icon-img-100">
@@ -309,7 +329,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>

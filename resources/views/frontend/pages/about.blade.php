@@ -20,7 +20,8 @@
                     <div class="img">
                         <img src="{{ asset('frontend/assets/imgs/header/profile.jpg') }}" alt="">
                     </div>
-                    <span class="icon">
+                    
+                    {{-- <span class="icon">
                         <img src="{{ asset('frontend/assets/imgs/header/icon1.png') }}" alt="">
                     </span>
                     <span class="icon">
@@ -31,7 +32,7 @@
                     </span>
                     <span class="icon">
                         <img src="{{ asset('frontend/assets/imgs/header/icon4.png') }}" alt="">
-                    </span>
+                    </span> --}}
                 </div>
             </div>
             <div class="col-lg-7 valign">
@@ -84,7 +85,13 @@
                                         </div>
                                         <div>
                                             <span class="opacity-7 mb-5">Email Us</span>
-                                            <h6>Support@Gmail.com</h6>
+                                            <h6>
+                                                @if ( !empty(getSetting()->email) )
+                                                    <a href="mailto:{{ getSetting()->email }}">{{ getSetting()->email }}</a>
+                                                @else
+                                                    <a href="mailto:{{ getSetting()->email }}">{{ getSetting()->email_optional }}</a>
+                                                @endif
+                                            </h6>
                                         </div>
                                     </div>
                                 </div>
@@ -95,7 +102,13 @@
                                         </div>
                                         <div>
                                             <span class="opacity-7 mb-5">Call Us</span>
-                                            <h6>+1 840 841 25 69</h6>
+                                            <h6>
+                                                @if ( !empty(getSetting()->phone) )
+                                                    <a href="tel:{{ getSetting()->phone }}">{{ getSetting()->phone }}</a>
+                                                @else
+                                                    <a href="tel:{{ getSetting()->phone_optional }}">{{ getSetting()->phone_optional }}</a>
+                                                @endif
+                                            </h6>
                                         </div>
                                     </div>
                                 </div>
@@ -116,37 +129,45 @@
 
 <section class="skills section-padding pt-0">
     <div class="container with-pad">
-        <div class="sec-head mb-80">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="sub-title-icon d-flex align-items-center">
-                        <span class="icon pe-7s-gym"></span>
-                        <h6>My Skills</h6>
+
+        @if ( $skill->is_active == 1 )
+            <div class="sec-head mb-80">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="sub-title-icon d-flex align-items-center">
+                            <span class="icon pe-7s-gym"></span>
+                            <h6>{{ $skill->title }}</h6>
+                        </div>
+                        <h3>{{ $skill->subtitle }}</h3>
                     </div>
-                    <h3>My Advantages</h3>
                 </div>
             </div>
-        </div>
+        @endif
+        
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="item mb-30">
-                    <div class="d-flex align-items-center mb-30">
-                        <div class="mr-30">
-                            <div class="img icon-img-40">
-                                <img src="{{ asset('frontend/assets/imgs/resume/s1.png') }}" alt="">
+
+            @foreach ($skills as $row)
+                <div class="col-lg-4 col-md-6">
+                    <div class="item mb-30">
+                        <div class="d-flex align-items-center mb-30">
+                            <div class="mr-30">
+                                <div class="img icon-img-40">
+                                    <img src="{{ asset($row->image) }}" alt="">
+                                </div>
+                            </div>
+                            <div>
+                                <h6 class="fz-18">{{ $row->name }}</h6>
                             </div>
                         </div>
-                        <div>
-                            <h6 class="fz-18">UI / UX Design</h6>
+                        <div class="skill-progress">
+                            <span class="progres" data-value="{{ $row->percentage }}%"></span>
                         </div>
+                        <span class="value">{{ $row->percentage }}%</span>
                     </div>
-                    <div class="skill-progress">
-                        <span class="progres" data-value="95%"></span>
-                    </div>
-                    <span class="value">95%</span>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
+            @endforeach
+
+            {{-- <div class="col-lg-4 col-md-6">
                 <div class="item mb-30">
                     <div class="d-flex align-items-center mb-30">
                         <div class="mr-30">
@@ -164,6 +185,7 @@
                     <span class="value">90%</span>
                 </div>
             </div>
+
             <div class="col-lg-4 col-md-6">
                 <div class="item md-mb30">
                     <div class="d-flex align-items-center mb-30">
@@ -182,6 +204,7 @@
                     <span class="value">85%</span>
                 </div>
             </div>
+
             <div class="col-lg-4 col-md-6">
                 <div class="item md-mb30">
                     <div class="d-flex align-items-center mb-30">
@@ -200,6 +223,7 @@
                     <span class="value">78%</span>
                 </div>
             </div>
+
             <div class="col-lg-4 col-md-6">
                 <div class="item">
                     <div class="d-flex align-items-center mb-30">
@@ -217,7 +241,7 @@
                     </div>
                     <span class="value">80%</span>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>
@@ -230,36 +254,43 @@
 
 <section class="resume section-padding pt-0">
     <div class="container with-pad">
-        <div class="sec-head mb-80">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 text-center">
-                    <div class="d-inline-block">
-                        <div class="sub-title-icon d-flex align-items-center">
-                            <span class="icon pe-7s-note2"></span>
-                            <h6>My Resume</h6>
+
+        @if ( $experience->is_active == 1 )
+            <div class="sec-head mb-80">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <div class="d-inline-block">
+                            <div class="sub-title-icon d-flex align-items-center">
+                                <span class="icon pe-7s-note2"></span>
+                                <h6>{{ $experience->title }}</h6>
+                            </div>
                         </div>
+                        <h3>{{ $experience->subtitle }}</h3>
                     </div>
-                    <h3>Education & Experience</h3>
                 </div>
             </div>
-        </div>
+        @endif
+
 
         <div>
             <div class="resume-swiper" data-carousel="swiper" data-space="50" data-speed="1000">
                 <div id="content-carousel-container-unq-resume" class="swiper-container"
                     data-swiper="container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="item text-center">
-                                <h6 class="main-color date fz-15 mb-60">2021 - Present</h6>
-                                <h5>Framer Designer & Developer</h5>
-                                <span class="opacity-8 fw-500 mt-10">[ at Ui-Themez ]</span>
-                                <p class="fz-13 mt-15">Crafting captivating digital experiences that put users
-                                    at the heart of the design. Elevate your product to increased user
-                                    satisfaction and loyalty.</p>
+
+                        @foreach ($experiences as $row)
+                            <div class="swiper-slide">
+                                <div class="item text-center">
+                                    <h6 class="main-color date fz-15 mb-60">{{ $row->year }}</h6>
+                                    <h5>{{ $row->designation }}</h5>
+                                    <span class="opacity-8 fw-500 mt-10">{{ $row->company_name }}</span>
+                                    <p class="fz-13 mt-15">{{ $row->short_desc }}</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
+                        @endforeach
+
+
+                        {{-- <div class="swiper-slide">
                             <div class="item text-center">
                                 <h6 class="main-color date fz-15 mb-60">2018 - 2020</h6>
                                 <h5>Front-End WordPress Developer</h5>
@@ -269,6 +300,7 @@
                                     satisfaction and loyalty.</p>
                             </div>
                         </div>
+
                         <div class="swiper-slide">
                             <div class="item text-center">
                                 <h6 class="main-color date fz-15 mb-60">2015 - 2017</h6>
@@ -279,6 +311,7 @@
                                     satisfaction and loyalty.</p>
                             </div>
                         </div>
+
                         <div class="swiper-slide">
                             <div class="item text-center">
                                 <h6 class="main-color date fz-15 mb-60">2010 - 2014</h6>
@@ -288,7 +321,7 @@
                                     at the heart of the design. Elevate your product to increased user
                                     satisfaction and loyalty.</p>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
