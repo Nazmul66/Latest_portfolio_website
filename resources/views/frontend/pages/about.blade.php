@@ -18,8 +18,12 @@
             <div class="col-lg-5 valign">
                 <div class="profile-img">
                     <div class="img">
-                        <img src="{{ asset('frontend/assets/imgs/header/profile.jpg') }}" alt="">
+                        <img src="{{ asset($about_us->image) }}" alt="">
                     </div>
+
+                    {{-- <div class="img">
+                        <img src="{{ asset('frontend/assets/imgs/header/profile.jpg') }}" alt="">
+                    </div> --}}
                     
                     {{-- <span class="icon">
                         <img src="{{ asset('frontend/assets/imgs/header/icon1.png') }}" alt="">
@@ -39,18 +43,25 @@
                 <div class="cont">
                     <div class="sub-title-icon d-flex align-items-center">
                         <span class="icon pe-7s-gleam"></span>
-                        <h6>About Me</h6>
+                        <h6>{{ $about_us->title }}</h6>
                     </div>
                     <div class="text">
-                        <h4 class="mb-30">I'm <span class="main-color">Creative Director and UI-UX
-                                Designer</span> from Sydney, Australia, working in web development and print
-                            media.</h4>
-                        <p>I enjoy turning complex problems into simple, beautiful and intuitive designs. My aim
-                            is to bring across your message and identity in the most creative way. I created web
-                            design for many famous brand companies.</p>
+                        <h4 class="mb-30">{{ $about_us->sub_title }}</h4>
 
-                        <div class="feat mt-30">
-                            <div class="row">
+
+                        <div class="about_desc feat mt-30">
+
+                            {!! $about_us->description !!}
+                            {{-- <p>I enjoy turning complex problems into simple, beautiful and intuitive designs. My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.</p>
+
+                            <ul>
+                                <li>Product Design</li>
+                                <li>Website Design</li>
+                                <li>Website Development</li>
+                                <li>Design Retainer</li>
+                            </ul> --}}
+                            
+                            {{-- <div class="row">
                                 <div class="col-sm-6">
                                     <div class="item mb-15">
                                         <h6 class="sub-title ls1"><span class="fz-13 mr-10 main-color"><i
@@ -73,7 +84,7 @@
                                         </h6>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
 
                         <div class="info mt-50">

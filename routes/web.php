@@ -19,6 +19,7 @@ Route::controller(FrontendController::class)->group(function () {
         Route::get('/about', 'about')->name('about');
         Route::get('/service', 'service')->name('service');
         Route::get('/portfolio', 'portfolio')->name('portfolio');
+        Route::get('/faq', 'faq')->name('faq');
         Route::get('/blog', 'blog')->name('blog');
         Route::get('/blog-details', 'blog_details')->name('blog.details');
         Route::get('/contact', 'contact')->name('contact');

@@ -18,22 +18,32 @@
                                 <a class="nav-link" href="{{ route('home') }}"><span
                                         class="rolling-text">Home</span></a>
                             </li>
+                            
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('about') }}"><span
                                         class="rolling-text">About</span></a>
                             </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('service') }}"><span
                                         class="rolling-text">Services</span></a>
                             </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('portfolio') }}"><span
                                         class="rolling-text">Portfolio</span></a>
                             </li>
-                            <li class="nav-item">
+
+                            {{-- <li class="nav-item">
                                 <a class="nav-link" href="{{ route('blog') }}"><span
                                         class="rolling-text">Blog</span></a>
+                            </li> --}}
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('faq') }}"><span
+                                        class="rolling-text">Faq</span></a>
                             </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('contact') }}"><span
                                         class="rolling-text">Contact</span></a>

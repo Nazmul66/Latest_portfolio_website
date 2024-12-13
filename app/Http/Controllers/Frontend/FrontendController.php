@@ -13,6 +13,7 @@ use App\Models\Contact;
 use App\Models\Course;
 use App\Models\CourseModule;
 use App\Models\Experience;
+use App\Models\Faq;
 use App\Models\Order;
 use App\Models\Portfolio;
 use App\Models\Service;
@@ -74,6 +75,18 @@ class FrontendController extends Controller
     {
         return view('frontend.pages.blog_details');
     }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function faq()
+    {        
+        $data['faq']       = DB::table('homepage_sections')->where('url_slug', "faq-section")->first();
+
+        $data['faqs']      = Faq::where('status', 1)->get();
+        return view('frontend.pages.faq', $data);
+    }
+
 
     /**
      * Show the form for creating a new resource.
