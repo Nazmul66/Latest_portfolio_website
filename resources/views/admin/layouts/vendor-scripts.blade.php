@@ -1,5 +1,5 @@
 <!-- JAVASCRIPT -->
-<script src="{{ asset('adminpanel/build/libs/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('public/adminpanel/build/libs/jquery/jquery.min.js') }}"></script>
 {{-- <script src="{{ asset('adminpanel/build/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script> --}}
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
@@ -8,11 +8,11 @@
 <!-- toaster Js plugins  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-<script src="{{ asset('adminpanel/build/js/plugin.js') }}"></script>
+<script src="{{ asset('public/adminpanel/build/js/plugin.js') }}"></script>
 
-<script src="{{ asset('adminpanel/build/libs/metismenu/metisMenu.min.js') }}"></script>
-<script src="{{ asset('adminpanel/build/libs/simplebar/simplebar.min.js') }}"></script>
-<script src="{{ asset('adminpanel/build/libs/node-waves/waves.min.js') }}"></script>
+<script src="{{ asset('public/adminpanel/build/libs/metismenu/metisMenu.min.js') }}"></script>
+<script src="{{ asset('public/adminpanel/build/libs/simplebar/simplebar.min.js') }}"></script>
+<script src="{{ asset('public/adminpanel/build/libs/node-waves/waves.min.js') }}"></script>
 <script>
     $('#change-password').on('submit', function(event) {
         event.preventDefault();
@@ -58,7 +58,7 @@
 
 
 <!-- App js -->
-<script src="{{ asset('adminpanel/build/js/app.js') }}"></script>
+<script src="{{ asset('public/adminpanel/build/js/app.js') }}"></script>
 
 @stack('script')
 {{-- @yield('script-bottom') --}}

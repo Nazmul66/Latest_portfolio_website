@@ -51,7 +51,7 @@ class TestimonialController extends Controller
             if( $request->hasFile('client_image') ){
                 $images = $request->file('client_image');
                 $imageName          =  rand(1, 99999999) . '.' . $images->getClientOriginalExtension();
-                $imagePath          = 'adminPanel/images/testimonial/';
+                $imagePath          = 'public/adminPanel/images/testimonial/';
                 $images->move($imagePath, $imageName);
                 $testimonial->client_image        =  $imagePath . $imageName;
             }
@@ -108,7 +108,7 @@ class TestimonialController extends Controller
                 }
 
                 $imageName         =  rand(1, 99999999) . '.' . $images->getClientOriginalExtension();
-                $imagePath         = 'adminPanel/images/testimonial/';
+                $imagePath         = 'public/adminPanel/images/testimonial/';
                 $images->move($imagePath, $imageName);
                 $testimonial->client_image        =  $imagePath . $imageName;
             }

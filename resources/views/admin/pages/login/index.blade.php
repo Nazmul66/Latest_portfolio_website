@@ -10,18 +10,18 @@
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{ asset('404/assets/images/favicon.ico') }}">
+        <link rel="shortcut icon" href="{{ asset('public/404/assets/images/favicon.ico') }}">
 
         <!-- Bootstrap Css -->
-        <link href="{{ asset('404/assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/404/assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
-        <link href="{{ asset('404/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/404/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
 
         <!-- App Css-->
-        <link href="{{ asset('404/assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/404/assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
         <!-- App js -->
-        <script src="{{ asset('404/assets/js/plugin.js') }}"></script>
+        <script src="{{ asset('public/404/assets/js/plugin.js') }}"></script>
 
     </head>
 
@@ -40,7 +40,7 @@
                                         </div>
                                     </div>
                                     <div class="col-5 align-self-end">
-                                        <img src="{{ asset('404/assets/images/profile-img.png') }}" alt="" class="img-fluid">
+                                        <img src="{{ asset('public/404/assets/images/profile-img.png') }}" alt="" class="img-fluid">
                                     </div>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@
                                     <a href="{{ url('/') }}" class="auth-logo-light">
                                         <div class="avatar-md profile-user-wid mb-4">
                                             <span class="avatar-title rounded-circle bg-light">
-                                                <img src="{{ asset('404/assets/images/user.png') }}" alt="" class="rounded-circle" height="34">
+                                                <img src="{{ asset('public/404/assets/images/user.png') }}" alt="" class="rounded-circle" height="34">
                                             </span>
                                         </div>
                                     </a>
@@ -58,7 +58,7 @@
                                     <a href="{{ url('/') }}" class="auth-logo-dark">
                                         <div class="avatar-md profile-user-wid mb-4">
                                             <span class="avatar-title rounded-circle bg-light">
-                                                <img src="{{ asset('404/assets/images/user.png') }}" alt="" class="rounded-circle" height="34">
+                                                <img src="{{ asset('public/404/assets/images/user.png') }}" alt="" class="rounded-circle" height="34">
                                             </span>
                                         </div>
                                     </a>
@@ -108,13 +108,13 @@
         <!-- end account-pages -->
 
         <!-- JAVASCRIPT -->
-        <script src="{{ asset('404/assets/libs/jquery/jquery.min.js') }}"></script>
-        <script src="{{ asset('404/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-        <script src="{{ asset('404/assets/libs/metismenu/metisMenu.min.js') }}"></script>
-        <script src="{{ asset('404/assets/libs/simplebar/simplebar.min.js') }}"></script>
-        <script src="{{ asset('404/assets/libs/node-waves/waves.min.js') }}"></script>
+        <script src="{{ asset('public/404/assets/libs/jquery/jquery.min.js') }}"></script>
+        <script src="{{ asset('public/404/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('public/404/assets/libs/metismenu/metisMenu.min.js') }}"></script>
+        <script src="{{ asset('public/404/assets/libs/simplebar/simplebar.min.js') }}"></script>
+        <script src="{{ asset('public/404/assets/libs/node-waves/waves.min.js') }}"></script>
         
         <!-- App js -->
-        <script src="{{ asset('404/assets/js/app.js') }}"></script>
+        <script src="{{ asset('public/404/assets/js/app.js') }}"></script>
     </body>
 </html>

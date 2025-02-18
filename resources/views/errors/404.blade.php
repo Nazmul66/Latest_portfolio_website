@@ -10,25 +10,23 @@
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{ asset('404/assets/images/favicon.ico') }}">
+        <link rel="shortcut icon" href="{{ asset('public/404/assets/images/favicon.ico') }}">
 
         <!-- Bootstrap Css -->
-        <link href="{{ asset('404/assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/404/assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
-        <link href="{{ asset('404/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/404/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
 
         <head>
-            <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
         <!-- App Css-->
-        <link href="{{ asset('404/assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/404/assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
         <!-- App js -->
 
     </head>
 
     <body>
-
         <div class="account-pages my-5 pt-5">
             <div class="container">
                 <div class="row">
@@ -45,7 +43,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-xl-6">
                         <div>
-                            <img src="{{ asset('404/assets/images/error-img.png') }}" alt="" class="img-fluid">
+                            <img src="{{ asset('public/404/assets/images/error-img.png') }}" alt="" class="img-fluid">
                         </div>
                     </div>
                 </div>
@@ -53,12 +51,12 @@
         </div>
 
         <!-- JAVASCRIPT -->
-        <script src="{{ asset('404/assets/libs/jquery/jquery.min.js') }}"></script>
-        <script src="{{ asset('404/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-        <script src="{{ asset('404/assets/libs/metismenu/metisMenu.min.js') }}"></script>
-        <script src="{{ asset('404/assets/libs/simplebar/simplebar.min.js') }}"></script>
-        <script src="{{ asset('404/assets/libs/node-waves/waves.min.js') }}"></script>
-        <script src="{{ asset('404/assets/js/app.js') }}"></script>
+        <script src="{{ asset('public/404/assets/libs/jquery/jquery.min.js') }}"></script>
+        <script src="{{ asset('public/404/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('public/404/assets/libs/metismenu/metisMenu.min.js') }}"></script>
+        <script src="{{ asset('public/404/assets/libs/simplebar/simplebar.min.js') }}"></script>
+        <script src="{{ asset('public/404/assets/libs/node-waves/waves.min.js') }}"></script>
+        <script src="{{ asset('public/404/assets/js/app.js') }}"></script>
 
     </body>
 </html>

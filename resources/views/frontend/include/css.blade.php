@@ -6,10 +6,10 @@
 <meta name="author" content="">
 
 <!-- Title  -->
-<title>@stack('add-title') - Nazmul Hassan</title>
+<title>@stack('add-title') - {{ getSetting()->site_name }}</title>
 
 <!-- Favicon -->
-<link rel="shortcut icon" href="{{ asset('frontend/assets/imgs/favicon.ico') }}">
+<link rel="shortcut icon" href="{{ asset(getSetting()->favicon) }}">
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -17,10 +17,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <!-- Plugins -->
-<link rel="stylesheet" href="{{ asset('frontend/assets/css/plugins.css') }}">
+<link rel="stylesheet" href="{{ asset('public/frontend/assets/css/plugins.css') }}">
 
 <!-- Core Style Css -->
-<link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('public/frontend/assets/css/style.css') }}">
 
 <!-- toaster css plugin -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">

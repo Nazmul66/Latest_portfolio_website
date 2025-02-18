@@ -3,21 +3,21 @@
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="index" class="logo logo-dark">
+                <a href="{{ url('/admin/dashboard') }}" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="{{ asset(getSetting()->logo) }}" alt="" width="22" height="22">
+                        <img src="{{ asset(getSetting()->logo) }}" alt="" width="60" >
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ asset(getSetting()->logo) }}" alt="" width="17" height="17">
+                        <img src="{{ asset(getSetting()->logo) }}" alt="" width="90">
                     </span>
                 </a>
 
-                <a href="index" class="logo logo-light">
+                <a href="{{ url('/admin/dashboard') }}" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{ asset(getSetting()->logo) }}" alt="" width="22" height="22">
+                        <img src="{{ asset(getSetting()->logo) }}" alt="" width="60">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ asset(getSetting()->logo) }}" alt="" width="55" height="55">
+                        <img src="{{ asset(getSetting()->logo) }}" alt="" width="90">
                     </span>
                 </a>
             </div>
@@ -163,7 +163,7 @@
 
                             <div class="col-sm-5">
                                 <div>
-                                    <img src="{{ URL::asset ('adminpanel/build/images/megamenu-img.png') }}" alt="" class="img-fluid mx-auto d-block">
+                                    <img src="{{ URL::asset ('public/adminpanel/build/images/megamenu-img.png') }}" alt="" class="img-fluid mx-auto d-block">
                                 </div>
                             </div>
                         </div>
@@ -202,45 +202,45 @@
                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 @switch(Session::get('lang'))
                     @case('ru')
-                        <img src="{{ URL::asset('adminpanel/build/images/flags/russia.jpg')}}" alt="Header Language" height="16">
+                        <img src="{{ URL::asset('public/adminpanel/build/images/flags/russia.jpg')}}" alt="Header Language" height="16">
                     @break
                     @case('it')
-                        <img src="{{ URL::asset('adminpanel/build/images/flags/italy.jpg')}}" alt="Header Language" height="16">
+                        <img src="{{ URL::asset('public/adminpanel/build/images/flags/italy.jpg')}}" alt="Header Language" height="16">
                     @break
                     @case('gr')
-                        <img src="{{ URL::asset('adminpanel/build/images/flags/germany.jpg')}}" alt="Header Language" height="16">
+                        <img src="{{ URL::asset('public/adminpanel/build/images/flags/germany.jpg')}}" alt="Header Language" height="16">
                     @break
                     @case('sp')
-                        <img src="{{ URL::asset('adminpanel/build/images/flags/spain.jpg')}}" alt="Header Language" height="16">
+                        <img src="{{ URL::asset('public/adminpanel/build/images/flags/spain.jpg')}}" alt="Header Language" height="16">
                     @break
                     @default
-                        <img src="{{ URL::asset('adminpanel/build/images/flags/us.jpg')}}" alt="Header Language" height="16">
+                        <img src="{{ URL::asset('public/adminpanel/build/images/flags/us.jpg')}}" alt="Header Language" height="16">
                 @endswitch
             </button>
             <div class="dropdown-menu dropdown-menu-end">
 
                 <!-- item-->
                 <a href="{{ url('adminpanel/lang/en') }}" class="dropdown-item notify-item language" data-lang="eng">
-                    <img src="{{ URL::asset ('adminpanel/build/images/flags/us.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
+                    <img src="{{ URL::asset ('public/adminpanel/build/images/flags/us.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
                 </a>
                 <!-- item-->
                 <a href="{{ url('adminpanel/lang/sp') }}" class="dropdown-item notify-item language" data-lang="sp">
-                    <img src="{{ URL::asset ('adminpanel/build/images/flags/spain.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
+                    <img src="{{ URL::asset ('public/adminpanel/build/images/flags/spain.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
                 </a>
 
                 <!-- item-->
                 <a href="{{ url('adminpanel/lang/gr') }}" class="dropdown-item notify-item language" data-lang="gr">
-                    <img src="{{ URL::asset ('adminpanel/build/images/flags/germany.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
+                    <img src="{{ URL::asset ('public/adminpanel/build/images/flags/germany.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
                 </a>
 
                 <!-- item-->
                 <a href="{{ url('adminpanel/lang/it') }}" class="dropdown-item notify-item language" data-lang="it">
-                    <img src="{{ URL::asset ('adminpanel/build/images/flags/italy.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
+                    <img src="{{ URL::asset ('public/adminpanel/build/images/flags/italy.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
                 </a>
 
                 <!-- item-->
                 <a href="{{ url('adminpanel/lang/ru') }}" class="dropdown-item notify-item language" data-lang="ru">
-                    <img src="{{ URL::asset ('adminpanel/build/images/flags/russia.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
+                    <img src="{{ URL::asset ('public/adminpanel/build/images/flags/russia.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
                 </a>
             </div>
         </div>
@@ -255,19 +255,19 @@
                     <div class="row g-0">
                         <div class="col">
                             <a class="dropdown-icon-item" href="#">
-                                <img src="{{ URL::asset ('adminpanel/build/images/brands/github.png') }}" alt="Github">
+                                <img src="{{ URL::asset ('public/adminpanel/build/images/brands/github.png') }}" alt="Github">
                                 <span>GitHub</span>
                             </a>
                         </div>
                         <div class="col">
                             <a class="dropdown-icon-item" href="#">
-                                <img src="{{ URL::asset ('adminpanel/build/images/brands/bitbucket.png') }}" alt="bitbucket">
+                                <img src="{{ URL::asset ('public/adminpanel/build/images/brands/bitbucket.png') }}" alt="bitbucket">
                                 <span>Bitbucket</span>
                             </a>
                         </div>
                         <div class="col">
                             <a class="dropdown-icon-item" href="#">
-                                <img src="{{ URL::asset ('adminpanel/build/images/brands/dribbble.png') }}" alt="dribbble">
+                                <img src="{{ URL::asset ('public/adminpanel/build/images/brands/dribbble.png') }}" alt="dribbble">
                                 <span>Dribbble</span>
                             </a>
                         </div>
@@ -276,19 +276,19 @@
                     <div class="row g-0">
                         <div class="col">
                             <a class="dropdown-icon-item" href="#">
-                                <img src="{{ URL::asset ('adminpanel/build/images/brands/dropbox.png') }}" alt="dropbox">
+                                <img src="{{ URL::asset ('public/adminpanel/build/images/brands/dropbox.png') }}" alt="dropbox">
                                 <span>Dropbox</span>
                             </a>
                         </div>
                         <div class="col">
                             <a class="dropdown-icon-item" href="#">
-                                <img src="{{ URL::asset ('adminpanel/build/images/brands/mail_chimp.png') }}" alt="mail_chimp">
+                                <img src="{{ URL::asset ('public/adminpanel/build/images/brands/mail_chimp.png') }}" alt="mail_chimp">
                                 <span>Mail Chimp</span>
                             </a>
                         </div>
                         <div class="col">
                             <a class="dropdown-icon-item" href="#">
-                                <img src="{{ URL::asset ('adminpanel/build/images/brands/slack.png') }}" alt="slack">
+                                <img src="{{ URL::asset ('public/adminpanel/build/images/brands/slack.png') }}" alt="slack">
                                 <span>Slack</span>
                             </a>
                         </div>
@@ -340,7 +340,7 @@
                         </a>
                         <a href="" class="text-reset notification-item">
                             <div class="d-flex">
-                                <img src="{{ URL::asset('adminpanel/build/images/users/avatar-3.jpg') }}"
+                                <img src="{{ URL::asset('public/adminpanel/build/images/users/avatar-3.jpg') }}"
                                     class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                 <div class="flex-grow-1">
                                     <h6 class="mt-0 mb-1">@lang('translation.James_Lemire')</h6>
@@ -372,7 +372,7 @@
 
                         <a href="" class="text-reset notification-item">
                             <div class="d-flex">
-                                {{-- <img src="{{ getPhoto('adminpanel/build/images/users/avatar-4.jpg') }}"
+                                {{-- <img src="{{ getPhoto('public/adminpanel/build/images/users/avatar-4.jpg') }}"
                                 class="me-3 rounded-circle avatar-xs" alt="user-pic"> --}}
                                 <div class="flex-grow-1">
                                     <h6 class="mt-0 mb-1">@lang('translation.Salena_Layfield')</h6>
@@ -399,7 +399,7 @@
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img class="rounded-circle header-profile-user"
-                        src="{{ isset(Auth::user()->image) ? asset(Auth::user()->image ?? 'avatar') : asset('adminpanel/build/images/users/avatar-1.jpg') }}"
+                        src="{{ isset(Auth::user()->image) ? asset(Auth::user()->image) : asset(getSetting()->profile_photo) }}"
                         alt="Header Avatar">
                     <span class="d-none d-xl-inline-block ms-1"
                         key="t-henry">{{ ucfirst(Auth::user()->name ?? 'name') }}</span>

@@ -37,7 +37,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <img src="{{ asset('adminpanel/images/demo-icon.png') }}" class="d-block" alt=""
+                            <img src="{{ asset('public/adminpanel/images/demo-icon.png') }}" class="d-block" alt=""
                                 for="up_image" style="width: 75px; height: 75px;">
                             <label for="image" class="form-label">Brand Image <span class="text-danger">* Image
                                     resulation ( 150px X 70px )</span></label>
@@ -230,7 +230,7 @@
                             <td>ebay</td>
                             <td>
                                 <a href="{{ asset('adminpanel/images/ebay.png') }}" target="__blank">
-                                    <img src="{{ asset('adminpanel/images/ebay.png') }}" alt=""
+                                    <img src="{{ asset('public/adminpanel/images/ebay.png') }}" alt=""
                                         style="width: 120px; height: 120px;">
                                 </a>
                             </td>
@@ -268,7 +268,7 @@
                             <td>Microsoft</td>
                             <td>
                                 <a href="{{ asset('adminpanel/images/microsoft.png') }}" target="__blank">
-                                    <img src="{{ asset('adminpanel/images/microsoft.png') }}" alt=""
+                                    <img src="{{ asset('public/adminpanel/images/microsoft.png') }}" alt=""
                                         style="width: 120px; height: 120px;">
                                 </a>
                             </td>

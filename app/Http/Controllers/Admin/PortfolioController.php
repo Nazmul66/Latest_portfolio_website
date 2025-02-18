@@ -48,7 +48,7 @@ class PortfolioController extends Controller
             if( $request->hasFile('image') ){
                 $images = $request->file('image');
                 $imageName          =  rand(1, 99999999) . '.' . $images->getClientOriginalExtension();
-                $imagePath          = 'adminPanel/images/portfolio/';
+                $imagePath          = 'public/adminPanel/images/portfolio/';
                 $images->move($imagePath, $imageName);
                 $portfolio->image        =  $imagePath . $imageName;
             }
@@ -103,7 +103,7 @@ class PortfolioController extends Controller
                 }
 
                 $imageName          =  rand(1, 99999999) . '.' . $images->getClientOriginalExtension();
-                $imagePath          = 'adminPanel/images/portfolio/';
+                $imagePath          = 'public/adminPanel/images/portfolio/';
                 $images->move($imagePath, $imageName);
                 $portfolio->image        =  $imagePath . $imageName;
             }

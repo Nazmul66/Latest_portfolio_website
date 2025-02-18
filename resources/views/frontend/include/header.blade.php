@@ -2,10 +2,10 @@
     <div class="container position-re">
         <div class="row">
             <div class="col-lg-3 col-6 order1">
-                <div class="bord">
+                <div class="">
                     <!-- Logo -->
                     <a class="logo icon-img-70" href="{{ route('home') }}">
-                        <img src="{{ asset(getSetting()->logo) }}" alt="logo">
+                        <img src="{{ asset(getSetting()->logo) }}" alt="logo" style="width: 125px;">
                     </a>
                 </div>
             </div>

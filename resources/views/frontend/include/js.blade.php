@@ -4,10 +4,10 @@
     <script src="{{ asset('frontend/assets/js/jquery-migrate-3.4.0.min.js') }}"></script>
 
     <!-- plugins -->
-    <script src="{{ asset('frontend/assets/js/plugins.js') }}"></script>
+    <script src="{{ asset('public/frontend/assets/js/plugins.js') }}"></script>
 
     <!-- custom scripts -->
-    <script src="{{ asset('frontend/assets/js/scripts.js') }}"></script>
+    <script src="{{ asset('public/frontend/assets/js/scripts.js') }}"></script>
 
     <!-- toaster Js plugins  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>

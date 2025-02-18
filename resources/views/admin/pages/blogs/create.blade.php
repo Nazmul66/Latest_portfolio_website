@@ -57,7 +57,7 @@
                                 <input id="formFile" type="file" name="image"
                                     accept=".jpg, .jpeg, .png, .webp" class="form-control form-control">
 
-                                <img id="previewImage" src="{{ asset('adminpanel/images/team-01.png') }}" class="mt-3 mb-3" alt="Preview"
+                                <img id="previewImage" src="{{ asset('public/adminpanel/images/team-01.png') }}" class="mt-3 mb-3" alt="Preview"
                                         style="display: block; width: 200px; height: 120px;">
                             </div>
 

@@ -63,7 +63,7 @@ class AboutUsController extends Controller
                 }
 
                 $imageName          = rand(1, 99999999) . '.' . $images->getClientOriginalExtension();
-                $imagePath          = 'adminpanel/images/about_us/';
+                $imagePath          = 'public/adminpanel/images/about_us/';
                 $images->move($imagePath, $imageName);
     
                 $aboutUs->image        =  $imagePath . $imageName;

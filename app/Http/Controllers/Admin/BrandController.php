@@ -66,7 +66,7 @@ class BrandController extends Controller
                 $images = $request->file('image');
 
                 $imageName          =  rand(1, 99999999) . '.' . $images->getClientOriginalExtension();
-                $imagePath          = 'adminPanel/images/brand/';
+                $imagePath          = 'public/adminPanel/images/brand/';
                 $images->move($imagePath, $imageName);
 
                 $brand->image        =  $imagePath . $imageName;
@@ -123,7 +123,7 @@ class BrandController extends Controller
                 }
 
                 $imageName          =  rand(1, 99999999) . '.' . $images->getClientOriginalExtension();
-                $imagePath          = 'adminPanel/images/brand/';
+                $imagePath          = 'public/adminPanel/images/brand/';
                 $images->move($imagePath, $imageName);
 
                 $brand->image        =  $imagePath . $imageName;
@@ -164,6 +164,11 @@ class BrandController extends Controller
         // }
 
         $brand = Brand::findOrFail($id);
+
+        if( !empty($brand->image) && file_exists($brand->image) ){
+            @unlink($brand->image);
+        }
+
         $brand->delete();
 
         Toastr::success("Brand Delete Successfully", 'Success', ["positionClass" => "toast-top-right"]);

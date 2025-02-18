@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 
 @push('add-title')
-    Home
+    Faq 
 @endpush
 
 @push('add-css')

@@ -32,7 +32,7 @@
                 <div class="md-mb80">
                     <div class="item pb-50 mb-50 bord-thin-bottom">
                         <div class="img">
-                            <img src="{{ asset('frontend/assets/imgs/blog/1.jpg') }}" alt="">
+                            <img src="{{ asset('public/frontend/assets/imgs/blog/1.jpg') }}" alt="">
                         </div>
                         <div class="cont mt-30">
                             <span class="date mb-10">20 July 2020</span>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="item pb-50 mb-50 bord-thin-bottom">
                         <div class="img">
-                            <img src="{{ asset('frontend/assets/imgs/blog/2.jpg') }}" alt="">
+                            <img src="{{ asset('public/frontend/assets/imgs/blog/2.jpg') }}" alt="">
                         </div>
                         <div class="cont mt-30">
                             <span class="date mb-10">20 July 2020</span>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="item">
                         <div class="img">
-                            <img src="{{ asset('frontend/assets/imgs/blog/3.jpg') }}" alt="">
+                            <img src="{{ asset('public/frontend/assets/imgs/blog/3.jpg') }}" alt="">
                         </div>
                         <div class="cont mt-30">
                             <span class="date mb-10">20 July 2020</span>
@@ -110,7 +110,7 @@
                         <div class="item">
                             <div class="valign">
                                 <div class="img">
-                                    <a href="blogs.html"><img src="{{ asset('frontend/assets/imgs/blog/t1.jpg') }}" alt=""></a>
+                                    <a href="blogs.html"><img src="{{ asset('public/frontend/assets/imgs/blog/t1.jpg') }}" alt=""></a>
                                 </div>
                             </div>
                             <div class="cont">
@@ -122,7 +122,7 @@
                         <div class="item">
                             <div class="valign">
                                 <div class="img">
-                                    <a href="blogs.html"><img src="{{ asset('frontend/assets/imgs/blog/t2.jpg') }}" alt=""></a>
+                                    <a href="blogs.html"><img src="{{ asset('public/frontend/assets/imgs/blog/t2.jpg') }}" alt=""></a>
                                 </div>
                             </div>
                             <div class="cont">
@@ -135,7 +135,7 @@
                             <div class="valign">
                                 <div class="img">
                                     <a href="blogs.html">
-                                        <img src="{{ asset('frontend/assets/imgs/blog/t3.jpg') }}" alt="">
+                                        <img src="{{ asset('public/frontend/assets/imgs/blog/t3.jpg') }}" alt="">
                                     </a>
                                 </div>
                             </div>

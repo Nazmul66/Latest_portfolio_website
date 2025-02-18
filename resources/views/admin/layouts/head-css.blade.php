@@ -1,21 +1,24 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+<!-- Favicon -->
+<link rel="shortcut icon" href="{{ asset(getSetting()->favicon) }}">
+
 <!-- Box Icon Css -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 <!-- Bootstrap Css -->
-<link href="{{ asset('adminpanel/build/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('public/adminpanel/build/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
 <!-- Icons Css -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
 <!-- App Css-->
-<link href="{{ asset('adminpanel/build/css/app.min.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('public/adminpanel/build/css/app.min.css') }}" rel="stylesheet" type="text/css" />
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 
 <!-- App js -->
 {{-- <script src="{{ asset('adminpanel/build/js/plugin.js') }}"></script> --}}
 
-<link href="{{ asset('adminpanel/build/css/custom.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('public/adminpanel/build/css/custom.css') }}" rel="stylesheet" type="text/css">
 </link>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

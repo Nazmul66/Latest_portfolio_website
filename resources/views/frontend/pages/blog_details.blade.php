@@ -25,7 +25,7 @@
                     <p class="sub-title mt-15">6 , August 2022 - By Admin</p>
                 </div>
                 <div class="main-img mb-80 mt-40">
-                    <img src="{{ asset('frontend/assets/imgs/blog/m.jpg') }}" alt="" class="radius-5">
+                    <img src="{{ asset('public/frontend/assets/imgs/blog/m.jpg') }}" alt="" class="radius-5">
                 </div>
             </div>
         </div>
@@ -80,12 +80,12 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="iner-img sm-mb30">
-                                    <img src="{{ asset('frontend/assets/imgs/blog/b1.jpg') }}" alt="">
+                                    <img src="{{ asset('public/frontend/assets/imgs/blog/b1.jpg') }}" alt="">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="iner-img">
-                                    <img src="{{ asset('frontend/assets/imgs/blog/b2.jpg') }}" alt="">
+                                    <img src="{{ asset('public/frontend/assets/imgs/blog/b2.jpg') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -158,7 +158,7 @@
                         <div class="flex">
                             <div class="author-img mr-30">
                                 <div class="img">
-                                    <img src="{{ asset('frontend/assets/imgs/blog/author1.jpg') }}" alt="" class="circle-img">
+                                    <img src="{{ asset('public/frontend/assets/imgs/blog/author1.jpg') }}" alt="" class="circle-img">
                                 </div>
                             </div>
                             <div class="cont valign">
@@ -173,7 +173,7 @@
                     </div>
 
                     <div class="next-prv-post flex mt-50">
-                        <div class="thumb-post bg-img" data-background="{{ asset('frontend/assets/imgs/blog/1.jpg') }}">
+                        <div class="thumb-post bg-img" data-background="{{ asset('public/frontend/assets/imgs/blog/1.jpg') }}">
                             <a href="blog-details.html">
                                 <span class="fz-12 text-u ls1 main-color mb-15"><i class="pe-7s-angle-left"></i>
                                     Prev Post</span>
@@ -182,7 +182,7 @@
                             </a>
                         </div>
                         <div class="thumb-post ml-auto text-right bg-img"
-                            data-background="{{ asset('frontend/assets/imgs/blog/2.jpg') }}">
+                            data-background="{{ asset('public/frontend/assets/imgs/blog/2.jpg') }}">
                             <a href="blog-details.html">
                                 <span class="fz-12 text-u ls1 main-color mb-15">Next Post <i
                                         class="pe-7s-angle-right"></i></span>
@@ -199,7 +199,7 @@
                             <div class="flex">
                                 <div class="user-img mr-30">
                                     <div class="img circle-60 line-height-1">
-                                        <img src="{{ asset('frontend/assets/imgs/blog/author1.jpg') }}" alt="" class="circle-img">
+                                        <img src="{{ asset('public/frontend/assets/imgs/blog/author1.jpg') }}" alt="" class="circle-img">
                                     </div>
                                 </div>
                                 <div class="cont">
@@ -218,7 +218,7 @@
                             <div class="flex">
                                 <div class="user-img mr-30">
                                     <div class="img circle-60 line-height-1">
-                                        <img src="{{ asset('frontend/assets/imgs/blog/author1.jpg') }}" alt="" class="circle-img">
+                                        <img src="{{ asset('public/frontend/assets/imgs/blog/author1.jpg') }}" alt="" class="circle-img">
                                     </div>
                                 </div>
                                 <div class="cont">

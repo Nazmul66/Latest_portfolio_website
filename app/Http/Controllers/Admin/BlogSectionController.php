@@ -82,7 +82,7 @@ class BlogSectionController extends Controller
             if( $request->hasFile('image') ){
                 $images = $request->file('image');
                 $imageName          =  rand(1, 99999999) . '.' . $images->getClientOriginalExtension();
-                $imagePath          = 'adminPanel/images/blogs/';
+                $imagePath          = 'public/adminPanel/images/blogs/';
                 $images->move($imagePath, $imageName);
                 $blog->image        =  $imagePath . $imageName;
             }
@@ -149,9 +149,9 @@ class BlogSectionController extends Controller
                 }
 
                 $imageName          =  rand(1, 99999999) . '.' . $images->getClientOriginalExtension();
-                $imagePath          = 'adminPanel/images/blogs/';
+                $imagePath          = 'public/adminPanel/images/blogs/';
                 $images->move($imagePath, $imageName);
-                $blog->image     =  $imagePath . $imageName;
+                $blog->image        =  $imagePath . $imageName;
             }
             $blog->save();
         } catch (\Exception $e) {

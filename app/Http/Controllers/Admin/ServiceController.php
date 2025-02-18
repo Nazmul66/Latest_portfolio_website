@@ -48,7 +48,7 @@ class ServiceController extends Controller
 
 
                 $imageName          =  rand(1, 99999999) . '.' . $images->getClientOriginalExtension();
-                $imagePath          = 'adminPanel/images/service/';
+                $imagePath          = 'public/adminPanel/images/service/';
                 $images->move($imagePath, $imageName);
                 $service->image        =  $imagePath . $imageName;
             }
@@ -101,7 +101,7 @@ class ServiceController extends Controller
                 }
 
                 $imageName          =  rand(1, 99999999) . '.' . $images->getClientOriginalExtension();
-                $imagePath          = 'adminPanel/images/service/';
+                $imagePath          = 'public/adminPanel/images/service/';
                 $images->move($imagePath, $imageName);
                 $service->image        =  $imagePath . $imageName;
             }

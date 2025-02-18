@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 
 @push('add-title')
-    Home
+    Contact-Us
 @endpush
 
 @push('add-css')
@@ -63,7 +63,7 @@
                             <h6 class="opacity-7">Email</h6>
                         </div>
                         <div class="ml-auto">
-                            <h4>
+                            <h4 style="text-transform: inherit;">
                                 @if ( !empty(getSetting()->email) )
                                     <a href="mailto:{{ getSetting()->email }}">{{ getSetting()->email }}</a>
                                 @else

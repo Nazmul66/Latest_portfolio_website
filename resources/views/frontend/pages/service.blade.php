@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 
 @push('add-title')
-    Home
+    Service Page
 @endpush
 
 @push('add-css')
@@ -40,7 +40,7 @@
                                 <div class="d-flex align-items-center mb-30">
                                     <div>
                                         <span class="icon-img-50 mr-40">
-                                            <img src="{{ asset($row->image) }}" alt="">
+                                            <img src="{{ asset($row->image) }}" alt="" style="width: 50px; height: 50px;">
                                         </span>
                                     </div>
                                     <div>
@@ -57,126 +57,6 @@
                     </div>
                 @endforeach
 
-
-                {{-- <div class="col-lg-4 col-md-6">
-                    <div class="item mb-30">
-                        <div class="cont">
-                            <div class="d-flex align-items-center mb-30">
-                                <div>
-                                    <span class="icon-img-50 mr-40">
-                                        <img src="{{ asset('frontend/assets/imgs/serv-img/2.png') }}" alt="">
-                                    </span>
-                                </div>
-                                <div>
-                                    <span class="opacity-7 fz-13 mb-5">8 Projects</span>
-                                    <h5 class="fz-20">Web Design</h5>
-                                </div>
-                            </div>
-                            <p>There are many variations of passages of available but to the majority have suffered
-                                but
-                                the into majority.</p>
-                            <a href="#0" class="mt-30">
-                                <span>Read More</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="item mb-30">
-                        <div class="cont">
-                            <div class="d-flex align-items-center mb-30">
-                                <div>
-                                    <span class="icon-img-50 mr-40">
-                                        <img src="{{ asset('frontend/assets/imgs/serv-img/3.png') }}" alt="">
-                                    </span>
-                                </div>
-                                <div>
-                                    <span class="opacity-7 fz-13 mb-5">8 Projects</span>
-                                    <h5 class="fz-20">Web Design</h5>
-                                </div>
-                            </div>
-                            <p>There are many variations of passages of available but to the majority have suffered
-                                but
-                                the into majority.</p>
-                            <a href="#0" class="mt-30">
-                                <span>Read More</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="item md-mb30">
-                        <div class="cont">
-                            <div class="d-flex align-items-center mb-30">
-                                <div>
-                                    <span class="icon-img-50 mr-40">
-                                        <img src="{{ asset('frontend/assets/imgs/serv-img/4.png') }}" alt="">
-                                    </span>
-                                </div>
-                                <div>
-                                    <span class="opacity-7 fz-13 mb-5">8 Projects</span>
-                                    <h5 class="fz-20">Web Design</h5>
-                                </div>
-                            </div>
-                            <p>There are many variations of passages of available but to the majority have suffered
-                                but
-                                the into majority.</p>
-                            <a href="#0" class="mt-30">
-                                <span>Read More</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="item sm-mb30">
-                        <div class="cont">
-                            <div class="d-flex align-items-center mb-30">
-                                <div>
-                                    <span class="icon-img-50 mr-40">
-                                        <img src="{{ asset('frontend/assets/imgs/serv-img/1.png') }}" alt="">
-                                    </span>
-                                </div>
-                                <div>
-                                    <span class="opacity-7 fz-13 mb-5">8 Projects</span>
-                                    <h5 class="fz-20">Web Design</h5>
-                                </div>
-                            </div>
-                            <p>There are many variations of passages of available but to the majority have suffered
-                                but
-                                the into majority.</p>
-                            <a href="#0" class="mt-30">
-                                <span>Read More</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="item">
-                        <div class="cont">
-                            <div class="d-flex align-items-center mb-30">
-                                <div>
-                                    <span class="icon-img-50 mr-40">
-                                        <img src="{{ asset('frontend/assets/imgs/serv-img/1.png') }}" alt="">
-                                    </span>
-                                </div>
-                                <div>
-                                    <span class="opacity-7 fz-13 mb-5">8 Projects</span>
-                                    <h5 class="fz-20">Web Design</h5>
-                                </div>
-                            </div>
-                            <p>There are many variations of passages of available but to the majority have suffered
-                                but
-                                the into majority.</p>
-                            <a href="#0" class="mt-30">
-                                <span>Read More</span>
-                            </a>
-                        </div>
-                    </div>
-                </div> --}}
             </div>
         </div>
     </section>
@@ -267,70 +147,22 @@
                 <h6><span class="main-color">Worldwide client satisfaction</span> trusted us </h6>
             </div>
 
-            <div class="row">
-                @foreach ($brands as $row)
-                    <div class="col-sm-4 col-md-3 col-lg-2 col-6">
-                        <div class="item">
-                            <div class="img icon-img-100">
-                                <a href="{{ asset($row->image) }}">
-                                    <img src="{{ asset($row->image) }}" alt="">
-                                </a>
+            <div style="margin-top: 40px;">
+                <div class="row align-items-center">
+                    @foreach ($brands as $row)
+                        <div class="col-sm-4 col-md-3 col-lg-2 col-6">
+                            <div class="items">
+                                <div class="img icon-img-100">
+                                    <a href="{{ asset($row->image) }}">
+                                        <img src="{{ asset($row->image) }}" alt="" style="width: 100px;">
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                @endforeach
-
-
-                {{-- <div class="col-sm-4 col-md-3 col-lg-2 col-6">
-                    <div class="item">
-                        <div class="img icon-img-100">
-                            <a href="#0">
-                                <img src="{{ asset('frontend/assets/imgs/brands/b2.png') }}" alt="">
-                            </a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-
-                <div class="col-sm-4 col-md-3 col-lg-2 col-6">
-                    <div class="item">
-                        <div class="img icon-img-100">
-                            <a href="#0">
-                                <img src="{{ asset('frontend/assets/imgs/brands/b3.png') }}" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4 col-md-3 col-lg-2 col-6">
-                    <div class="item">
-                        <div class="img icon-img-100">
-                            <a href="#0">
-                                <img src="{{ asset('frontend/assets/imgs/brands/b4.png') }}" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4 col-md-3 col-lg-2 col-6">
-                    <div class="item">
-                        <div class="img icon-img-100">
-                            <a href="#0">
-                                <img src="{{ asset('frontend/assets/imgs/brands/b1.png') }}" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4 col-md-3 col-lg-2 col-6">
-                    <div class="item">
-                        <div class="img icon-img-100">
-                            <a href="#0">
-                                <img src="{{ asset('frontend/assets/imgs/brands/b3.png') }}" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div> --}}
             </div>
+
         </div>
     </section>
 

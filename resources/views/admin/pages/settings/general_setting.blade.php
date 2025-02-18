@@ -86,7 +86,7 @@
                                                 <div class="col-lg-6">
                                                     @if ( !empty($settings->pdf) )
                                                         <a href="{{ asset($settings->pdf) }}" target="__blank">
-                                                            <img src="{{ asset('adminpanel/images/pdf_file.png') }}" height="50px">
+                                                            <img src="{{ asset('public/adminpanel/images/pdf_file.png') }}" height="50px">
                                                         </a>
                                                     @endif
     

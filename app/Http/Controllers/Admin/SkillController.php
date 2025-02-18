@@ -46,7 +46,7 @@ class SkillController extends Controller
             if( $request->hasFile('image') ){
                 $images = $request->file('image');
                 $imageName          =  rand(1, 99999999) . '.' . $images->getClientOriginalExtension();
-                $imagePath          = 'adminPanel/images/skills/';
+                $imagePath          = 'public/adminPanel/images/skills/';
                 $images->move($imagePath, $imageName);
                 $skill->image        =  $imagePath . $imageName;
             }
@@ -99,7 +99,7 @@ class SkillController extends Controller
                 }
 
                 $imageName          =  rand(1, 99999999) . '.' . $images->getClientOriginalExtension();
-                $imagePath          = 'adminPanel/images/skills/';
+                $imagePath          = 'public/adminPanel/images/skills/';
                 $images->move($imagePath, $imageName);
                 $skill->image        =  $imagePath . $imageName;
             }

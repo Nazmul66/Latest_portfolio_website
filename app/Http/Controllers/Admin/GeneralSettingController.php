@@ -85,7 +85,7 @@ class GeneralSettingController extends Controller
                 }
 
                 $imageName          = rand(1, 99999999) . '.' . $images->getClientOriginalExtension();
-                $imagePath          = 'adminpanel/images/settings/';
+                $imagePath          = 'public/adminpanel/images/settings/';
                 $images->move($imagePath, $imageName);
     
                 $setting->favicon        =  $imagePath . $imageName;
@@ -100,7 +100,7 @@ class GeneralSettingController extends Controller
                 }
 
                 $imageName          = rand(1, 99999999) . '.' . $images->getClientOriginalExtension();
-                $imagePath          = 'adminpanel/images/settings/';
+                $imagePath          = 'public/adminpanel/images/settings/';
                 $images->move($imagePath, $imageName);
     
                 $setting->profile_photo        =  $imagePath . $imageName;
@@ -115,7 +115,7 @@ class GeneralSettingController extends Controller
                 }
 
                 $imageName          =  rand(1, 99999999) . '.' . $logo->getClientOriginalExtension();
-                $imagePath          = 'adminpanel/images/settings/';
+                $imagePath          = 'public/adminpanel/images/settings/';
                 $logo->move($imagePath, $imageName);
     
                 $setting->logo        =  $imagePath . $imageName;
@@ -129,14 +129,13 @@ class GeneralSettingController extends Controller
                 }
 
                 $imageName          =  rand(1, 99999999) . '.' . $pdf->getClientOriginalExtension();
-                $imagePath          = 'adminpanel/images/settings/';
+                $imagePath          = 'public/adminpanel/images/settings/';
                 $pdf->move($imagePath, $imageName);
     
                 $setting->pdf        =  $imagePath . $imageName;
             }
 
             // dd($setting);
-
             $setting->save();
 
         } catch (\Exception $e) {

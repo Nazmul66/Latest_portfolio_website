@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 
 @push('add-title')
-    Home
+    About Us
 @endpush
 
 @push('add-css')
@@ -20,23 +20,6 @@
                     <div class="img">
                         <img src="{{ asset($about_us->image) }}" alt="">
                     </div>
-
-                    {{-- <div class="img">
-                        <img src="{{ asset('frontend/assets/imgs/header/profile.jpg') }}" alt="">
-                    </div> --}}
-                    
-                    {{-- <span class="icon">
-                        <img src="{{ asset('frontend/assets/imgs/header/icon1.png') }}" alt="">
-                    </span>
-                    <span class="icon">
-                        <img src="{{ asset('frontend/assets/imgs/header/icon2.png') }}" alt="">
-                    </span>
-                    <span class="icon">
-                        <img src="{{ asset('frontend/assets/imgs/header/icon3.png') }}" alt="">
-                    </span>
-                    <span class="icon">
-                        <img src="{{ asset('frontend/assets/imgs/header/icon4.png') }}" alt="">
-                    </span> --}}
                 </div>
             </div>
             <div class="col-lg-7 valign">
@@ -52,39 +35,6 @@
                         <div class="about_desc feat mt-30">
 
                             {!! $about_us->description !!}
-                            {{-- <p>I enjoy turning complex problems into simple, beautiful and intuitive designs. My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.</p>
-
-                            <ul>
-                                <li>Product Design</li>
-                                <li>Website Design</li>
-                                <li>Website Development</li>
-                                <li>Design Retainer</li>
-                            </ul> --}}
-                            
-                            {{-- <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="item mb-15">
-                                        <h6 class="sub-title ls1"><span class="fz-13 mr-10 main-color"><i
-                                                    class="fas fa-check"></i></span> Product Design</h6>
-                                    </div>
-                                    <div class="item sm-mb15">
-                                        <h6 class="sub-title ls1"><span class="fz-13 mr-10 main-color"><i
-                                                    class="fas fa-check"></i></span> Website Design</h6>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="item mb-15">
-                                        <h6 class="sub-title ls1"><span class="fz-13 mr-10 main-color"><i
-                                                    class="fas fa-check"></i></span> Website Development
-                                        </h6>
-                                    </div>
-                                    <div class="item">
-                                        <h6 class="sub-title ls1"><span class="fz-13 mr-10 main-color"><i
-                                                    class="fas fa-check"></i></span> Design Retainer
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div> --}}
                         </div>
 
                         <div class="info mt-50">
@@ -163,7 +113,7 @@
                         <div class="d-flex align-items-center mb-30">
                             <div class="mr-30">
                                 <div class="img icon-img-40">
-                                    <img src="{{ asset($row->image) }}" alt="">
+                                    <img src="{{ asset($row->image) }}" alt="" style="width: 40px; height: 40px;">
                                 </div>
                             </div>
                             <div>
@@ -178,81 +128,6 @@
                 </div>
             @endforeach
 
-            {{-- <div class="col-lg-4 col-md-6">
-                <div class="item mb-30">
-                    <div class="d-flex align-items-center mb-30">
-                        <div class="mr-30">
-                            <div class="img icon-img-40">
-                                <img src="{{ asset('frontend/assets/imgs/resume/s2.png') }}" alt="">
-                            </div>
-                        </div>
-                        <div>
-                            <h6 class="fz-18">Development</h6>
-                        </div>
-                    </div>
-                    <div class="skill-progress">
-                        <span class="progres" data-value="90%"></span>
-                    </div>
-                    <span class="value">90%</span>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="item md-mb30">
-                    <div class="d-flex align-items-center mb-30">
-                        <div class="mr-30">
-                            <div class="img icon-img-40">
-                                <img src="{{ asset('frontend/assets/imgs/resume/s3.png') }}" alt="">
-                            </div>
-                        </div>
-                        <div>
-                            <h6 class="fz-18">Graphic Design</h6>
-                        </div>
-                    </div>
-                    <div class="skill-progress">
-                        <span class="progres" data-value="85%"></span>
-                    </div>
-                    <span class="value">85%</span>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="item md-mb30">
-                    <div class="d-flex align-items-center mb-30">
-                        <div class="mr-30">
-                            <div class="img icon-img-40">
-                                <img src="{{ asset('frontend/assets/imgs/resume/s4.png') }}" alt="">
-                            </div>
-                        </div>
-                        <div>
-                            <h6 class="fz-18">WordPress</h6>
-                        </div>
-                    </div>
-                    <div class="skill-progress">
-                        <span class="progres" data-value="78%"></span>
-                    </div>
-                    <span class="value">78%</span>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="item">
-                    <div class="d-flex align-items-center mb-30">
-                        <div class="mr-30">
-                            <div class="img icon-img-40">
-                                <img src="{{ asset('frontend/assets/imgs/resume/s5.png') }}" alt="">
-                            </div>
-                        </div>
-                        <div>
-                            <h6 class="fz-18">sketch</h6>
-                        </div>
-                    </div>
-                    <div class="skill-progress">
-                        <span class="progres" data-value="80%"></span>
-                    </div>
-                    <span class="value">80%</span>
-                </div>
-            </div> --}}
         </div>
     </div>
 </section>
@@ -281,7 +156,6 @@
                 </div>
             </div>
         @endif
-
 
         <div>
             <div class="resume-swiper" data-carousel="swiper" data-space="50" data-speed="1000">
